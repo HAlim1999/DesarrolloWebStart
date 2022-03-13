@@ -57,6 +57,7 @@ header{
 
 main#productos{
 	grid-area: productos;
+    
 }
 
 aside{
@@ -119,6 +120,8 @@ header nav ul li a#menu{
 
 header nav ul li a#menu:hover{
     border-bottom-color: crimson;
+    transform: translate(10px);
+    cursor: pointer;
 
 }
 
@@ -147,8 +150,13 @@ header span:hover{
 
 /*FIN HEADER*/
 
+
+
 /*inicio main*/
-.sec-img{
+
+
+
+/*.sec-img{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -158,10 +166,58 @@ header span:hover{
     width: 24rem;
     border-radius: 5%;
 }
+
+
+
+
+
+
 .sec-img img:hover{
     border: 3px solid crimson;
     transition: all 100ms;
+}*/
+
+
+
+.slider{
+    width:95%;
+    margin: auto;
+    overflow:hidden;
 }
+.slider ul{
+    display:flex;
+    padding:0;
+    width:300%;
+
+    animation: cambio 20s infinite alternate;
+    animation-timing-function: ease;
+    
+}
+
+.slider li{
+    width:75%;
+    list-style: none;
+}
+.slider img{
+    width: 50%;
+    border-radius: 4%;
+    border: 1px solid crimson;
+    margin-left: 25%;
+    
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    30%{margin-left: 0;}
+
+    35%{margin-left:-100%;}
+    65%{margin-left: -100%;}
+
+    70%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+
+
 /*fin main*/
 
 
